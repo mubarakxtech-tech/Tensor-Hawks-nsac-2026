@@ -1,0 +1,19 @@
+# --- Python ---
+__pycache__/
+venv/
+*.py[cod]
+.env
+
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+MemoryCaptures/
+*.csproj
+*.sln
+*.user
+*.suo
