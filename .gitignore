@@ -1,19 +1,20 @@
-# --- Python ---
-__pycache__/
-venv/
-*.py[cod]
-.env
+# Unity Cache & Temporary Folders (any subfolder)
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
 
-# --- Unity ---
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]serSettings/
-MemoryCaptures/
+# Visual Studio & IDE Cache
+**/.vs/
+**/.idea/
+**/.vscode/
 *.csproj
+*.unityproj
 *.sln
-*.user
 *.suo
+*.user
+*.userprefs
