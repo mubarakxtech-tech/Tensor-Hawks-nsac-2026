@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\WebApiClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\WebApiClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\InterplanetaryJourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\InterplanetaryJourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\OrbitCameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\OrbitCameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Data\\DataModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Data\\DataModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Editor\\TensorHawksAutoBuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Editor\\TensorHawksAutoBuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\WebApiClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\WebApiClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\SettingsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\SettingsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Data\\DataModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Data\\DataModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "TensorHawksAutoBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Editor\\TensorHawksAutoBuilder.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\TensorHawksAutoBuilder.cs",
+              "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Editor\\TensorHawksAutoBuilder.cs",
+              "RelativeToolTip": "Assets\\Editor\\TensorHawksAutoBuilder.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAuwP8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T09:39:51.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OrbitCameraController.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\OrbitCameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\OrbitCameraController.cs",
               "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\OrbitCameraController.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\OrbitCameraController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALsAAAAAAAAAAAAuwPEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T12:54:11.679Z",
+              "WhenOpened": "2026-11-12T16:33:27.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "SettingsManager.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\SettingsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SettingsManager.cs",
+              "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\SettingsManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\SettingsManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T14:39:31.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GameManager.cs",
               "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Core\\GameManager.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAgwJ4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwBAAAAAAAAAAAuwFMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T12:53:28.096Z",
+              "WhenOpened": "2026-11-11T11:49:25.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "WebApiClient.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\WebApiClient.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\WebApiClient.cs",
               "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Core\\WebApiClient.cs",
               "RelativeToolTip": "Assets\\Scripts\\Core\\WebApiClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-09T12:51:51.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "DataModels.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Data\\DataModels.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\DataModels.cs",
               "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\Data\\DataModels.cs",
               "RelativeToolTip": "Assets\\Scripts\\Data\\DataModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T12:47:30.552Z",
+              "WhenOpened": "2026-11-09T12:47:30.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InterplanetaryJourney.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\InterplanetaryJourney.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\InterplanetaryJourney.cs",
+              "ToolTip": "C:\\Users\\Muhammad Huzaifa\\Tensor-Hawks-nsac-2026\\unity_frontend\\Assets\\Scripts\\UI\\InterplanetaryJourney.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\InterplanetaryJourney.cs",
+              "ViewState": "AgIAABwCAAAAAAAAAAAuwEMCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T13:55:46.063Z",
               "EditorCaption": ""
             }
           ]
