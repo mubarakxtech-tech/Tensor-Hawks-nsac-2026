@@ -34,20 +34,20 @@ ROCKET_SPECS = {
 
 # Official Delta-V Requirements & Environmental Parameters (m/s)
 DESTINATION_SPECS = {
-    "Lunar Gateway": {
-        "required_dv": 4100.0,
-        "latency_seconds": 2.5,
-        "power_au": 1.0
+    "Mars": {
+        "required_dv": 5700.0,       # m/s (LEO -> Mars Transfer + Capture/Low Orbit)
+        "latency_seconds": 750.0,    # ~12.5 minutes (mean Earth-Mars light-time)
+        "power_au": 0.431            # Solar irradiance ratio relative to Earth (586.2 / 1361 W/m²)
     },
-    "Mars Orbit": {
-        "required_dv": 6200.0,
-        "latency_seconds": 750.0,
-        "power_au": 0.5
+    "Jupiter": {
+        "required_dv": 8800.0,       # m/s (LEO -> Jupiter Transfer + Capture Orbit)
+        "latency_seconds": 2595.0,   # ~43.25 minutes (mean Earth-Jupiter light-time at 5.20 AU)
+        "power_au": 0.037            # Solar irradiance ratio relative to Earth (50.26 / 1361 W/m²)
     },
-    "Deep Space Asteroid": {
-        "required_dv": 7500.0,
-        "latency_seconds": 1800.0,
-        "power_au": 0.2
+    "Saturn": {
+        "required_dv": 10200.0,      # m/s (LEO -> Saturn Transfer + Capture Orbit)
+        "latency_seconds": 4775.0,   # ~79.6 minutes (mean Earth-Saturn light-time at 9.58 AU)
+        "power_au": 0.011            # Solar irradiance ratio relative to Earth (14.82 / 1361 W/m²)
     }
 }
 
