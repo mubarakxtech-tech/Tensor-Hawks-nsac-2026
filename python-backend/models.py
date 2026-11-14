@@ -3,7 +3,7 @@ from typing import List
 
 class SimulationInput(BaseModel):
     selected_rocket: str = Field(..., description="Rocket option: 'Saturn V', 'Space Launch System (SLS)', or 'Falcon 9'")
-    target_destination: str = Field(..., description="Destination: 'Lunar Gateway', 'Mars Orbit', or 'Deep Space Asteroid'")
+    target_destination: str = Field(..., description="Destination: 'Mars', 'Jupiter', or 'Saturn'")
     power_system_id: str
     comm_system_id: str
     thruster_id: str
