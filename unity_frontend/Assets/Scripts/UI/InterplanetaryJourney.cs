@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Controls the 3D space flight sequence from LEO to destination planets.
-/// Handles dynamic rocket mesh selection (Saturn V, SLS, Falcon 9),
+/// Handles dynamic rocket mesh selection (Tensor Rocket, SLS, Falcon 9),
 /// 3-phase Cubic Bezier orbital transit, and velocity-matched orbital entry.
 /// </summary>
 public class InterplanetaryJourney : MonoBehaviour
@@ -20,7 +20,7 @@ public class InterplanetaryJourney : MonoBehaviour
 
     [Header("Rocket 3D Models")]
     public GameObject[] rocketObjects; // Saturn V, space_launch_system_sls, spacex_falcon_9
-    public string selectedRocketName = "Saturn V";
+    public string selectedRocketName;
 
     [Header("Standalone Test Mode Settings")]
     public bool enableTestLaunchOnStart = false;
@@ -269,15 +269,15 @@ public class InterplanetaryJourney : MonoBehaviour
 
     private void ActivateRocketObject(string rocketName)
     {
-        string target = string.IsNullOrEmpty(rocketName) ? "saturn" : rocketName.ToLower().Trim();
+        string target = string.IsNullOrEmpty(rocketName) ? "Saturn V" : rocketName.ToLower().Trim();
 
         // Dynamically find rocket GameObjects in scene
-        GameObject saturnObj = FindObjectInSceneByName("Saturn V") ?? FindObjectInSceneByName("Saturn_V");
+        GameObject tensorObj = FindObjectInSceneByName("Tensor Rocket") ?? FindObjectInSceneByName("Tensor_Rocket");
         GameObject slsObj = FindObjectInSceneByName("space_launch_system_sls") ?? FindObjectInSceneByName("SLS Block 1") ?? FindObjectInSceneByName("SLS");
         GameObject falconObj = FindObjectInSceneByName("spacex_falcon_9") ?? FindObjectInSceneByName("spacex_falcon_9_v4") ?? FindObjectInSceneByName("Falcon 9");
 
         // Disable all first
-        if (saturnObj != null) saturnObj.SetActive(false);
+        if (tensorObj != null) tensorObj.SetActive(false);
         if (slsObj != null) slsObj.SetActive(false);
         if (falconObj != null) falconObj.SetActive(false);
 
@@ -291,15 +291,15 @@ public class InterplanetaryJourney : MonoBehaviour
         {
             chosenRocket = slsObj;
         }
-        else if (target.Contains("saturn") || target.Contains("rocket_1"))
+        else if (target.Contains("tensor") || target.Contains("rocket_1"))
         {
-            chosenRocket = saturnObj;
+            chosenRocket = tensorObj;
         }
 
         // Failsafe fallback
         if (chosenRocket == null)
         {
-            chosenRocket = saturnObj ?? slsObj ?? falconObj;
+            chosenRocket = tensorObj ?? slsObj ?? falconObj;
         }
 
         if (chosenRocket != null)
@@ -491,7 +491,19 @@ public class InterplanetaryJourney : MonoBehaviour
         SetThrusterIntensity(orbitThrusterIntensity);
         isOrbiting = true;
 
-        Debug.Log("<color=green>✅ PERFECT VELOCITY-MATCHED ORBITAL ENTRY AT " + targetName + "!</color>");
+        // 🎥 1. Automatically switch Camera to Mode 2 (Planet Overview)
+        if (cameraController != null && cameraController.cameraMode != 2)
+        {
+            cameraController.SetCameraMode(2);
+        }
+
+        // 📊 2. Automatically open the Telemetry Drawer UI report on arrival
+        if (TensorHawks.Core.GameManager.Instance != null && TensorHawks.Core.GameManager.Instance.telemetryDrawer != null)
+        {
+            TensorHawks.Core.GameManager.Instance.telemetryDrawer.SetActive(true);
+        }
+
+        Debug.Log($"<color=green>✅ PERFECT VELOCITY-MATCHED ORBITAL ENTRY AT {targetName}!</color>");
     }
 
     private void ExecuteContinuousOrbit()

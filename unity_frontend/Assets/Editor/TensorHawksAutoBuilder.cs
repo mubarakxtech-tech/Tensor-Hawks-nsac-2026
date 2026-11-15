@@ -69,7 +69,7 @@ public class TensorHawksAutoBuilder : EditorWindow
         planetHLG.childForceExpandWidth = true;
         planetHLG.childForceExpandHeight = true;
 
-        string[] planets = { "Moon Orbit", "Mars Orbit", "Jupiter Orbit", "Saturn Orbit" };
+        string[] planets = {"Mars", "Jupiter", "Saturn" };
         string[] spriteFiles = { "Assets/Sprites/Moon.jpg", "Assets/Sprites/Mars.jpg", "Assets/Sprites/Jupiter.jpg", "Assets/Sprites/Saturn.jpg" };
         string[] specs = { "Delta-V: 3,800 m/s", "Delta-V: 6,200 m/s", "Delta-V: 12,500 m/s", "Delta-V: 15,000 m/s" };
 
@@ -108,7 +108,7 @@ public class TensorHawksAutoBuilder : EditorWindow
         rocketHLG.childForceExpandWidth = true;
         rocketHLG.childForceExpandHeight = true;
 
-        string[] rockets = { "Saturn V", "SLS Block 1", "Falcon 9" };
+        string[] rockets = { "Tensor Rocket", "Space Launch System SLS", "SpaceX Falcon 9" };
         string[] rocketSprites = { "Assets/Sprites/Rocket_1.jpg", "Assets/Sprites/Rocket_2.jpg", "Assets/Sprites/Rocket_3.jpg" };
         string[] rocketSpecs = { "Heavy Lift | 34.5 MN", "Deep Space | 39.1 MN", "Medium Lift | 7.6 MN" };
 

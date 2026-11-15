@@ -10,7 +10,7 @@ namespace TensorHawks.Core
     public class WebApiClient : MonoBehaviour
     {
         [Header("API Settings")]
-        [SerializeField] private string apiUrl = "http://127.0.0.1:8000/run-simulation";
+        [SerializeField] private string apiUrl = "https://tensor-hawks-api.onrender.com/run-simulation";
 
         public void SendSimulationData(SimulationRequest requestData, Action<SimulationResponse> onSuccess, Action<string> onError)
         {
@@ -24,6 +24,8 @@ namespace TensorHawks.Core
 
             using (UnityWebRequest webRequest = new UnityWebRequest(apiUrl, "POST"))
             {
+                webRequest.timeout = 60; // Wait up to 60 seconds for FastAPI
+
                 webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
                 webRequest.downloadHandler = new DownloadHandlerBuffer();
                 webRequest.SetRequestHeader("Content-Type", "application/json");

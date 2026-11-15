@@ -2,7 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 using TensorHawks.Data;
+
+
 
 namespace TensorHawks.Core
 {
@@ -24,6 +27,11 @@ namespace TensorHawks.Core
         public Slider volumeSlider;
         public TMP_Dropdown qualityDropdown;
         public TMP_Text deltaVRequirementText;
+
+        [Header("Budget & Instruments Controls")]
+        public Slider budgetSlider;
+        public TMP_Text budgetText;
+        public TMP_Dropdown instrumentsDropdown;
 
         [Header("AutoBuilder UI Text Bindings")]
         public TMP_Text destinationInfoText;
@@ -76,6 +84,12 @@ namespace TensorHawks.Core
                 payloadSlider.onValueChanged.AddListener(OnPayloadSliderChanged);
                 OnPayloadSliderChanged(payloadSlider.value);
             }
+            if (budgetSlider != null)
+            {
+                budgetSlider.onValueChanged.RemoveAllListeners();
+                budgetSlider.onValueChanged.AddListener(OnBudgetSliderChanged);
+                OnBudgetSliderChanged(budgetSlider.value);
+            }
         }
 
         public void OnFuelSliderChanged(float val)
@@ -91,6 +105,14 @@ namespace TensorHawks.Core
             if (payloadText != null)
             {
                 payloadText.text = $"PAYLOAD MASS: {val:N0} KG";
+            }
+        }
+
+        public void OnBudgetSliderChanged(float val)
+        {
+            if (budgetText != null)
+            {
+                budgetText.text = $"MISSION BUDGET: ${val:F2} MILLION";
             }
         }
 
@@ -250,42 +272,40 @@ namespace TensorHawks.Core
 
         public void OnRunSimulationClicked()
         {
+            // 1. Read Inputs
             currentRequest.total_fuel_mass_kg = fuelSlider != null ? fuelSlider.value : 45000f;
             currentRequest.payload_mass_kg = payloadSlider != null ? payloadSlider.value : 5000f;
+            currentRequest.budget_limit_usd = budgetSlider != null ? budgetSlider.value : 2500000000;
+
+            if (instrumentsDropdown != null)
+            {
+                int index = instrumentsDropdown.value;
+                switch (index)
+                {
+                    case 0:
+                        currentRequest.instruments_ids = new List<string> { "INS_MAG_01" };
+                        break;
+                    case 1:
+                        currentRequest.instruments_ids = new List<string> { "INS_MAG_01", "INS_RAD_02" };
+                        break;
+                    case 2:
+                        currentRequest.instruments_ids = new List<string> { "INS_MAG_01", "INS_RAD_02", "INS_SPECT_03", "INS_CAM_04" };
+                        break;
+                }
+            }
 
             if (string.IsNullOrEmpty(currentRequest.selected_rocket))
             {
-                currentRequest.selected_rocket = "Saturn V";
+                currentRequest.selected_rocket = "Tensor Rocket";
             }
 
-            // Transition cleanly to 3D Orbit Viewport - Hide menu overlays & settings
-            SetPanelStates(intro: false, dest: false, hangar: false, orbit: true, telem: false);
-            if (settingsPanel) settingsPanel.SetActive(false);
-
-            // Execute 3D Flight sequence with dynamic destination and rocket selection
-            InterplanetaryJourney journey = FindFirstObjectByType<InterplanetaryJourney>();
-            if (journey != null)
+            // 2. Display waiting status on Screen 3
+            if (destinationInfoText != null)
             {
-                string target = !string.IsNullOrEmpty(currentRequest?.target_destination)
-                    ? currentRequest.target_destination
-                    : (!string.IsNullOrEmpty(journey.testDestination) ? journey.testDestination : "Mars");
-
-                string selectedRocket = !string.IsNullOrEmpty(currentRequest?.selected_rocket)
-                    ? currentRequest.selected_rocket
-                    : "Saturn V";
-
-                // Pass BOTH target destination AND selected rocket model (7 arguments)
-                journey.StartFlightSequence(
-                    target,
-                    selectedRocket,
-                    true,
-                    3800f,
-                    4200f,
-                    currentRequest != null ? currentRequest.payload_mass_kg : 500f,
-                    currentRequest != null ? currentRequest.total_fuel_mass_kg : 100f
-                );
+                destinationInfoText.text = "CONNECTING TO PHYSICS ENGINE... PLEASE WAIT";
             }
 
+            // 3. Send Network Request (3D Launch waits for response)
             if (webApiClient != null)
             {
                 webApiClient.SendSimulationData(
@@ -298,7 +318,31 @@ namespace TensorHawks.Core
 
         private void OnSimulationSuccess(SimulationResponse response)
         {
-            if (telemetryDrawer != null) telemetryDrawer.SetActive(true);
+            // NOW switch to 3D Orbit View (Screen 4) ONLY after FastAPI returns 200 OK
+            SetPanelStates(intro: false, dest: false, hangar: false, orbit: true, telem: false);
+            if (settingsPanel) settingsPanel.SetActive(false);
+
+            InterplanetaryJourney journey = FindFirstObjectByType<InterplanetaryJourney>();
+            if (journey != null)
+            {
+                string target = !string.IsNullOrEmpty(currentRequest?.target_destination)
+                    ? currentRequest.target_destination
+                    : (!string.IsNullOrEmpty(journey.testDestination) ? journey.testDestination : "Mars");
+
+                string selectedRocket = !string.IsNullOrEmpty(currentRequest?.selected_rocket)
+                    ? currentRequest.selected_rocket
+                    : "Tensor Rocket";
+
+                journey.StartFlightSequence(
+                    target,
+                    selectedRocket,
+                    true,
+                    3800f,
+                    4200f,
+                    currentRequest != null ? currentRequest.payload_mass_kg : 500f,
+                    currentRequest != null ? currentRequest.total_fuel_mass_kg : 100f
+                );
+            }
 
             if (response != null)
             {
@@ -313,9 +357,17 @@ namespace TensorHawks.Core
 
         private void OnSimulationError(string errorMessage)
         {
-            Debug.LogWarning($"[GameManager] {errorMessage} - Continuing in Autonomous Offline Mode.");
-            if (telemetryDrawer != null) telemetryDrawer.SetActive(false);
+            Debug.LogWarning($"[GameManager] {errorMessage}");
+
+            // Displays a clean UI message on screen so the user knows to fix their sliders
+            if (statusBadgeText != null)
+            {
+                telemetryDrawer.SetActive(true);
+                statusBadgeText.text = "INVALID PARAMETERS - ADJUST HANGAR SLIDERS";
+            }
         }
+
+
 
         public void QuitGame()
         {

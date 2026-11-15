@@ -7,8 +7,8 @@ namespace TensorHawks.Data
     [Serializable]
     public class SimulationRequest
     {
-        public string selected_rocket;        // "Saturn V", "SLS", "Falcon 9"
-        public string target_destination;     // "Moon Orbit", "Mars Orbit", "Jupiter Orbit", "Saturn Orbit"
+        public string selected_rocket;        // "Saturn V", "Space Launch System SLS", "SpaceX Falcon 9"
+        public string target_destination;     // "Mars", "Jupiter", "Saturn"
         public float total_fuel_mass_kg;      // Fuel Slider value
         public float payload_mass_kg;         // Payload Slider value
         public string power_system_id = "SP_StandardAlpha_02";
